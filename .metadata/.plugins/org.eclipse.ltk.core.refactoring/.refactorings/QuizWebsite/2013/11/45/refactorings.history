@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;quizsite.MyDBinfo.java&apos; to &apos;MyDBInfo.java&apos;&#x0A;- Original project: &apos;QuizWebsite&apos;&#x0A;- Original element: &apos;quizsite.MyDBinfo.java&apos;&#x0A;- Renamed element: &apos;quizsite.MyDBInfo.java&apos;" description="Rename compilation unit &apos;MyDBinfo.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;quizsite{MyDBinfo.java" name="MyDBInfo.java" references="false" stamp="1384034806194" version="1.0"/>
+</session>

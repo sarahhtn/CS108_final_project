@@ -6,7 +6,6 @@ INDEX VERSION 1.126+/Users/snader2/Documents/fear the tree/CS108/CS108_final_pro
 4249315662.index
 84777399.index
 1384487945.index
-1624166268.index
 2545238116.index
 1271342938.index
 156905802.index
