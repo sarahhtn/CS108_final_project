@@ -8,9 +8,9 @@ package quizsite;
  */
 public class MyDBInfo {
 	
-	public static final String MYSQL_USERNAME = "ccs108snader2";
-	public static final String MYSQL_PASSWORD = "ooriwiex";
+	public static final String MYSQL_USERNAME = "ccs108kainqiu";
+	public static final String MYSQL_PASSWORD = "thateoyo";
 	public static final String MYSQL_DATABASE_SERVER = "mysql-user-master.stanford.edu";
-	public static final String MYSQL_DATABASE_NAME = "c_cs108_snader2";
+	public static final String MYSQL_DATABASE_NAME = "c_cs108_kainqiu";
 
 }
