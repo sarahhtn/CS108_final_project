@@ -45,6 +45,12 @@ skljdfklsdjfds
 Yes <input type="checkbox" name = "yesrandomquestions" onclick = "validate">
 No <input type="checkbox" name = "norandomquestions" onclick = "validate">
 
+<<<<<<< HEAD
+=======
+Yes <input type="checkbox" name = "yesrandomquestions" onclick = "validate">
+No <input type="checkbox" name = "norandomquestions" onclick = "validate">
+
+>>>>>>> e370c43b2e7c56c59f1c4695eb949b2ace4bdbc9
 
 <h2> Choose how many pages to display questions</h2>
 <p> If you choose one page, all the questions will be displayed on a single webpage and there will be one submit button</p>
