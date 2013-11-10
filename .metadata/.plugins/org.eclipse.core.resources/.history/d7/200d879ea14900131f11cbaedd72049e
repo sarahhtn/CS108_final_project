@@ -22,7 +22,5 @@ public class Question {
 		answers.add(answ);
 	}
 	
-	public String getQuestion(){
-		return question;
-	}
+	
 }

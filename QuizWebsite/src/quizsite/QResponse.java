@@ -1,11 +1,12 @@
 package quizsite;
 
-public class QResponse implements Question{
-
-	@Override
-	public boolean checkAnswer() {
-		// TODO Auto-generated method stub
-		return false;
+public class QResponse extends Question{
+	
+	
+	public QResponse(String question, String answer){
+		super(question, answer);
 	}
+	
+	
 
 }

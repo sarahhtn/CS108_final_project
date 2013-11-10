@@ -13,7 +13,7 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="100" y="22"/>
 <coolItem id="org.eclipse.jst.j2ee.J2eeMainActionSet" itemType="typeToolBarContribution" x="70" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="84" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="120" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="54" y="22"/>
 <coolItem id="org.eclipse.wst.server.ui.internal.webbrowser.actionSet" itemType="typeToolBarContribution" x="32" y="22"/>
 <coolItem id="org.eclipse.wst.ws.explorer.explorer" itemType="typeToolBarContribution" x="32" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -22,7 +22,7 @@
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="152" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -31,36 +31,10 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Question.java" partName="Question.java" path="/Users/snader2/Documents/fear the tree/CS108/CS108_final_project/QuizWebsite/src/quizsite/Question.java" title="Question.java" tooltip="QuizWebsite/src/quizsite/Question.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/QuizWebsite/src/quizsite/Question.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="168" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="QResponse.java" partName="QResponse.java" path="/Users/snader2/Documents/fear the tree/CS108/CS108_final_project/QuizWebsite/src/quizsite/QResponse.java" title="QResponse.java" tooltip="QuizWebsite/src/quizsite/QResponse.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/QuizWebsite/src/quizsite/QResponse.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="159" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FillIn.java" partName="FillIn.java" path="/Users/snader2/Documents/fear the tree/CS108/CS108_final_project/QuizWebsite/src/quizsite/FillIn.java" title="FillIn.java" tooltip="QuizWebsite/src/quizsite/FillIn.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/QuizWebsite/src/quizsite/FillIn.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MultiChoice.java" partName="MultiChoice.java" path="/Users/snader2/Documents/fear the tree/CS108/CS108_final_project/QuizWebsite/src/quizsite/MultiChoice.java" title="MultiChoice.java" tooltip="QuizWebsite/src/quizsite/MultiChoice.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/QuizWebsite/src/quizsite/MultiChoice.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PictureResponse.java" partName="PictureResponse.java" path="/Users/snader2/Documents/fear the tree/CS108/CS108_final_project/QuizWebsite/src/quizsite/PictureResponse.java" title="PictureResponse.java" tooltip="QuizWebsite/src/quizsite/PictureResponse.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/QuizWebsite/src/quizsite/PictureResponse.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="53" selectionTopPixel="0"/>
-</editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
@@ -68,6 +42,10 @@
 </view>
 <view id="org.eclipse.ui.views.AllMarkersView" partName="Markers">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.allSeverityField" categoryGroup="org.eclipse.ui.ide.type" markerContentGenerator="org.eclipse.ui.ide.allMarkersGenerator" partName="Markers">
+<expanded>
+<category IMemento.internal.id="Java Problems"/>
+<category IMemento.internal.id="Java Task (1 item)"/>
+</expanded>
 <columnWidths org.eclipse.ui.ide.allSeverityField="300" org.eclipse.ui.ide.locationField="84" org.eclipse.ui.ide.markerType="114" org.eclipse.ui.ide.pathField="144" org.eclipse.ui.ide.resourceField="114"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.allSeverityField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -85,7 +63,7 @@
 </view>
 <view id="org.eclipse.wst.server.ui.ServersView" partName="Servers"/>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jst.j2ee.J2EEPerspective">
+<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="org.eclipse.jst.j2ee.J2EEPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jst.j2ee.internal.perspective.J2EEPerspective" id="org.eclipse.jst.j2ee.J2EEPerspective" label="Java EE"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
@@ -209,48 +187,7 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/QuizWebsite/src/quizsite/MyDBinfo.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/QuizWebsite/src/quizsite/MyDBInfo.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/QuizWebsite/src/quizsite/Quiz"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/QuizWebsite/src/quizsite/Question.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/QuizWebsite/src/quizsite/QResponse.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/QuizWebsite/src/quizsite/FillIn.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/QuizWebsite/src/quizsite/MultiChoice.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/QuizWebsite/src/quizsite/PictureResponse.java"/>
-</editors>
-<item historyLabel="MyDBinfo.java" index="0">
-<position info="not_deleted" x="0" y="639"/>
-</item>
-<item historyLabel="MyDBInfo.java" index="1">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Quiz" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Question.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Question.java" index="3">
-<position info="not_deleted" x="145" y="0"/>
-</item>
-<item historyLabel="Question.java" index="3">
-<position info="not_deleted" x="168" y="0"/>
-</item>
-<item historyLabel="QResponse.java" index="4">
-<position info="not_deleted" x="159" y="0"/>
-</item>
-<item historyLabel="FillIn.java" index="5">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="MultiChoice.java" index="6">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item active="true" historyLabel="PictureResponse.java" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -267,6 +204,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Quiz.java" tooltip="QuizWebsite/src/quizsite/Quiz.java">
+<persistable path="/QuizWebsite/src/quizsite/Quiz.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PictureResponse.java" tooltip="QuizWebsite/src/quizsite/PictureResponse.java">
 <persistable path="/QuizWebsite/src/quizsite/PictureResponse.java"/>
 </file>

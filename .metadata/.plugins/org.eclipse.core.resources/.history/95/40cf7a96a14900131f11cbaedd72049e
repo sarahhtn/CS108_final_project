@@ -18,11 +18,7 @@ public class Question {
 		return this.answer.equals(answer);
 	}
 	
-	public void addAnswer(String answ){
+	public addAnswer(String answ){
 		answers.add(answ);
-	}
-	
-	public String getQuestion(){
-		return question;
 	}
 }
