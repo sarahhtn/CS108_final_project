@@ -1,0 +1,5 @@
+package quizsite;
+
+public interface Question {
+
+}

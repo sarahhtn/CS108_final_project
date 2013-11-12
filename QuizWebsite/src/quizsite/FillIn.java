@@ -1,6 +1,5 @@
 package quizsite;
 
-public class Quiz {
-	
+public class FillIn {
 
 }
