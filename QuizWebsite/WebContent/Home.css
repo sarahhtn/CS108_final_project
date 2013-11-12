@@ -1,0 +1,77 @@
+@CHARSET "UTF-8";
+
+body {
+	font-family: Tahoma, Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	background-color: #ffffff;
+	color: #576069;
+}
+
+.lists {
+	width: 100%;
+}
+
+.list_block {
+	width: 23%;
+	display: inline-block;
+	border: 1px solid #cccccc;
+	padding: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.msg {
+	width: 98%;
+	display: inline-block;
+	border: 1px solid #cccccc;
+	padding: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.friends_activity {
+	width: 98%;
+	display: inline-block;
+	border: 1px solid #cccccc;
+	padding: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.block_title {
+	text-align: center;
+}
+
+/*.pop_quiz {
+	color: red;
+	width: 24%;	
+	display: inline-block;
+	border: 1px solid #cccccc;
+	padding: 5px;
+}
+
+.recent_created_quiz {
+	width: 24%;
+	display: inline-block;
+	border: 1px solid #cccccc;
+	padding: 5px;
+}
+
+.taken_quiz_activity {
+	width: 24%;
+	display: inline-block;
+	border: 1px solid #cccccc;
+	padding: 5px;
+}
+
+.recent_self_created_quiz {
+	width: 24%;
+	display: inline-block;
+	border: 1px solid #cccccc;
+	padding: 5px;
+}*/
