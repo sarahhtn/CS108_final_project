@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  * Servlet implementation class LoginServlet
@@ -34,9 +35,19 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		HttpSession session = request.getSession();
+		DBConnection con = (DBConnection) session.getAttribute("connection");
+		if(con == null) {
+			con = new DBConnection();
+			session.setAttribute("connection", con);
+			//System.out.println("con is NULL");
+		}
 		String userName = request.getParameter("name");
 		String userPw = request.getParameter("pw");
-		if(false) {
+		if(User.Login(userName, userPw, con)) {
+			// login succeed
+			User currUser = new User(userName, con);
+			session.setAttribute("user", currUser);
 			RequestDispatcher dispatch = request.getRequestDispatcher("Home.jsp");
 			dispatch.forward(request, response);
 		} else {

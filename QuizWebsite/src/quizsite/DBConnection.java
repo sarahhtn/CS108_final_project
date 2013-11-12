@@ -22,6 +22,8 @@ public class DBConnection {
 			Class.forName("com.mysql.jdbc.Driver");
 			con = DriverManager.getConnection
 			( "jdbc:mysql://" + server, account ,password);
+			Statement stmt = con.createStatement();
+			stmt.executeQuery("USE " + DBConnection.database);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -31,6 +33,9 @@ public class DBConnection {
 		}
 	}
 
+	public Connection getConnection() {
+		return this.con;
+	}
 	
 	public void closeConnection() {
 		try {
