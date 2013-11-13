@@ -15,14 +15,7 @@ public class Question {
 	}
 	
 	public boolean checkAnswer(String answer) {
-		for(int i=0; i<answers.size(); i++){
-			if(this.answer.equals(answer)) return true;
-		}
-		return false;
-	}
-	
-	public void resetQuestion(String question){
-		this.question = question;
+		return this.answer.equals(answer);
 	}
 	
 	public void addAnswer(String answ){
@@ -31,13 +24,5 @@ public class Question {
 	
 	public String getQuestion(){
 		return question;
-	}
-	
-	public ArrayList<String> getAllPossAnswers(){
-		return answers;
-	}
-	
-	public String getAnswer(){
-		return answer;
 	}
 }

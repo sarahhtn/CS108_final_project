@@ -21,10 +21,6 @@ public class Question {
 		return false;
 	}
 	
-	public void resetQuestion(String question){
-		this.question = question;
-	}
-	
 	public void addAnswer(String answ){
 		answers.add(answ);
 	}

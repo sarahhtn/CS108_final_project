@@ -21,23 +21,11 @@ public class Question {
 		return false;
 	}
 	
-	public void resetQuestion(String question){
-		this.question = question;
-	}
-	
 	public void addAnswer(String answ){
 		answers.add(answ);
 	}
 	
 	public String getQuestion(){
 		return question;
-	}
-	
-	public ArrayList<String> getAllPossAnswers(){
-		return answers;
-	}
-	
-	public String getAnswer(){
-		return answer;
 	}
 }
