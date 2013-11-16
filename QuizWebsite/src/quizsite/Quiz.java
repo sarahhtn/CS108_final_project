@@ -5,10 +5,10 @@ import java.util.Set;
 
 public class Quiz {
 
-	private int question_response;
-	private int multiple_choice;
-	private int picture_response;
-	private int fill_inblank;
+//	private int question_response;
+//	private int multiple_choice;
+//	private int picture_response;
+//	private int fill_inblank;
 	
 	boolean display_random = false;
 	boolean display_one_page = false;
@@ -16,31 +16,51 @@ public class Quiz {
 	boolean display_immediate_correction = false;
 	boolean display_final_correction= false;
 	
+	private String title;
+	private String description;
+	
 	Set<Question> questions = new HashSet<Question>();
 	
-	public void setNumQuestionResponse(int a){
-		question_response = a;
+//	public void setNumQuestionResponse(int a){
+//		question_response = a;
+//	}
+//	public void setFillInBlank(int a){
+//		fill_inblank = a;
+//	}
+//	public void setNumMultipleChoice(int a){
+//		multiple_choice = a;
+//	}
+//	public void setNumPictureResponse(int a){
+//		picture_response = a;
+//	}
+//	public int getNumQuestionResponse(){
+//		return question_response;
+//	}
+//	public int getNumMultipleChoice(){
+//		return multiple_choice;
+//	}
+//	public int getNumPictureResponse(){
+//		return picture_response;
+//	}
+//	public int getNumFillInBlank(){
+//		return fill_inblank;
+//	}
+//	
+	
+	public void addQuizTitle(String str){
+		title = str;
 	}
-	public void setFillInBlank(int a){
-		fill_inblank = a;
+	
+	public String getQuizTitle(){
+		return title;
 	}
-	public void setNumMultipleChoice(int a){
-		multiple_choice = a;
+	
+	public void addQuizDescription(String str){
+		description = str;
 	}
-	public void setNumPictureResponse(int a){
-		picture_response = a;
-	}
-	public int getNumQuestionResponse(){
-		return question_response;
-	}
-	public int getNumMultipleChoice(){
-		return multiple_choice;
-	}
-	public int getNumPictureResponse(){
-		return picture_response;
-	}
-	public int getNumFillInBlank(){
-		return fill_inblank;
+	
+	public String getQuizDescription(){
+		return description;
 	}
 	
 	public void addQuestion(Question ques){

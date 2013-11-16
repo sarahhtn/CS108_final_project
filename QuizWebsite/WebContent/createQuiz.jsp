@@ -9,23 +9,30 @@
 <body>
 <form action="chooseQuestionType.jsp" method = "post">
 
+<%
+ServletContext a = request.getServletContext();
+Quiz quiz = (Quiz) a.getAttribute("quiz");
+%>
+
 <h1> Create your quiz! </h1>
+
+<h2> Enter the title of your quiz: </h2>
+<input type = "text" name = "quiztitle">
+
 
 <h2> Enter your overall description of the purpose of this quiz: </h2>
 <input type="text" name = "quizdescription">
 
 <!--
-
 <h2> Creating questions for the quiz </h2>
 <p> Place next to the corresponding textbox how many of each type of question you would like in your quiz </p>
 <p> Question-Response: <input type="text" name = "question_response"> </p>
 <p> Fill in the Blank: <input type="text" name = "fill_in_blank"> </p>
 <p> Multiple Choice: <input type="text" name = "multiple_choice"> </p>
 <p> Picture- Response Questions: <input type="text" name = "picture_response"> </p>
-
 -->
 
-<p> Click next to create your questions for this quiz <input type="submit" value = "Next" /></p>
+<p> Click next to create your questions for this quiz: <input type="submit" value = "Next" /></p>
 </form>
 
 </body>
