@@ -6,39 +6,16 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title> Options </title>
+<title> Quiz Options </title>
 </head>
-
-
 <form action="finishCreationQuiz.jsp" method="post">
-<%
-Quiz quiz = request.getParameter(quiz);
-%>
-<input name="quiz" type="hidden" value=<%= quiz %>/> 
 
 <body>
+<%
+Quiz quiz = request.getParameter("quiz");
+%>
+<input name="quiz" type="hidden" value= <%= quiz %>/> 
 
-<!--<script type="text/javascript">
-function validate(){
-	console.log("here");
-	if(document.getElementById('yesrandomquestions').checked){
-		alert("hi");
-	}
-	else if(document.getElementById('norandomquestions').checked){
-			
-		}
-	else if((document.getElementById('yesimmediate').checked)){
-			
-		}
-	else if (document.getElementById('noimmediate').checked){
-			
-		}
-	}
-	
-</script>
-
-
--->
 <h1> Choose options for your quiz</h1>
 
 <h2> Random Questions? </h2>
@@ -46,10 +23,6 @@ function validate(){
 <p> If you choose yes, the questions will be presented in random order </p>
 <p> If you choose no, the questions will always be presented in the same order </p>
 
-<!--
-Yes <input type="checkbox" name = "yesrandomquestions" onclick = "validate">
-No <input type="checkbox" name = "norandomquestions" onclick = "validate">
--->
 <select name = "randomQuestions">
   <option value="1"> Yes </option>
   <option value="2"> No </option>
@@ -67,10 +40,6 @@ No <input type="checkbox" name = "norandomquestions" onclick = "validate">
 <h2> Immediate Correction? (only for multiple page quizzes)</h2>
 <p> If you choose yes, the user will receive immediate feedback on an answer.</p>
 <p> If you choose no, the quiz will only be graded once all the questions have been seen and responded to. </p>
-<!--  
-Yes <input type="checkbox" name = "yesimmediate" onclick = validate>
-No <input type="checkbox" name = "noimmediate" onclick = validate>
--->
 
 <select name = "immediateCorrection">
   <option value="1"> Yes </option>

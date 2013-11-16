@@ -12,7 +12,7 @@
 <body>
 
 <%
-Quiz quiz = request.getParameter(quiz);
+Quiz quiz = request.getParameter("quiz");
 %>
 
 <form action="optionsQuiz.jsp" method = "post">

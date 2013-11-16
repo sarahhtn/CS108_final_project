@@ -12,15 +12,15 @@
 <form action="Home.jsp" method = "post">
 <%
 
-Quiz quiz = request.getParameter(quiz);
-
+Quiz quiz = request.getParameter("quiz");
 String randomQuestionsCheckBoxValue = request.getParameter("randomQuestions");
-if(randomQuestionsCheckBoxValue.equals("Yes")){
+
+if(randomQuestionsCheckBoxValue.equals("1")){
 	quiz.setDisplayRandomTrue();
 }
 
 String pageNumbers = request.getParameter("pagenumbers");
-if(pageNumbers.equals("One")){
+if(pageNumbers.equals("1")){
 	quiz.setDisplayOnePageTrue();
 }
 else{
@@ -28,7 +28,7 @@ else{
 }
 
 String immediateCorrectionCheckBoxValue = request.getParameter("immediateCorrection");
-if(immediateCorrectionCheckBoxValue.equals("Yes")){
+if(immediateCorrectionCheckBoxValue.equals("1")){
 	quiz.setImmediateCorrectionTrue();
 }
 else{
