@@ -33,16 +33,11 @@ if(immediateCorrectionCheckBoxValue.equals("Yes")){
 else{
 	x.setFinalCorrectionTrue();
 }
-
 %>
 
-
-
-<h1> Congratulations on creating your quiz! </h1>
+<h1> Congratulations on finishing creating your quiz! </h1>
 
 <img src = "http://www.mucky-pups.co/wp-content/uploads/2013/05/9.jpg" alt = "happy dog">
-
-
 <p> <input type="submit" value = "Return to Homepage" /></p>
 </form>
 
