@@ -3,6 +3,7 @@ package quizsite;
 import java.util.ArrayList;
 
 public class MultiChoice extends Question{
+	
 	private ArrayList<String> options;
 	
 	public MultiChoice(String question, String answer){
@@ -10,8 +11,11 @@ public class MultiChoice extends Question{
 		options = new ArrayList<String>();
 	}
 	
-	public void addMCOption(String option){
-		options.add(option);
+	public void addMCOptions(String MCoptions){
+		String[] choices = MCoptions.split(DELIM);
+		for(int i=0; i<choices.length; i++){
+			options.add(choices[i]);
+		}
 	}
 	
 	public ArrayList<String> getMCOptions(){
