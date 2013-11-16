@@ -22,19 +22,19 @@ quiz.addQuizDescription(description);
 
 %>
 
-<form action="" method = "post">
+<form action="CreateQR.html" method = "post">
 <p> <input type="submit" value = "Question-Response" /> </p>
 </form>
 
-<form action="optionsQuiz.jsp" method = "post">
+<form action="CreateFITB.html" method = "post">
 <p> <input type="submit" value = "Fill In the Blank" /> </p>
 </form>
 
-<form action="optionsQuiz.jsp" method = "post">
+<form action="CreateMC.html" method = "post">
 <p> <input type="submit" value = "Multiple Choice" /> </p>
 </form>
 
-<form action="optionsQuiz.jsp" method = "post">
+<form action="CreatePR.html" method = "post">
 <p> <input type="submit" value = "Picture-Response Questions" /> </p>
 </form>
 
