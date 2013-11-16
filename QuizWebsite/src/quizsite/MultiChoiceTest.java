@@ -21,8 +21,8 @@ public class MultiChoiceTest {
 //
 //	@Test
 //	public void testAddMCOption() {
-		test.addMCOption(B);
-		test.addMCOption(A);
+		test.addMCOptions(B);
+		test.addMCOptions(A);
 		assertEquals(2, test.getMCOptions().size());
 //	}
 //
