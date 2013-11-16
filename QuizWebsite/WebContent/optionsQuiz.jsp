@@ -56,7 +56,7 @@ No <input type="checkbox" name = "norandomquestions" onclick = "validate">
 
 <h2> Immediate Correction? (only for multiple page quizzes)</h2>
 <p> If you choose yes, the user will receive immediate feedback on an answer.</p>
-<p> If you choose no, the quiz will only be graded once all the questions have been sen and responded to. </p>
+<p> If you choose no, the quiz will only be graded once all the questions have been seen and responded to. </p>
 
 Yes <input type="checkbox" name = "yesimmediate" onclick = validate>
 No <input type="checkbox" name = "noimmediate" onclick = validate>
