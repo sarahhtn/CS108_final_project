@@ -6,12 +6,15 @@ public class Question {
 	private String question;
 	private String answer;
 	private ArrayList<String> answers;
+	public final String DELIM = "\n";
 	
 	Question(String question, String answer){
 		this.question = question;
+//		System.out.println("question: " + this.question);
 		this.answer = answer;
+//		System.out.println("answer: " + this.answer);
 		answers = new ArrayList<String>();
-		answers.add(answer);
+		parseAnswers();
 	}
 	
 	public boolean checkAnswer(String answer) {
@@ -23,6 +26,14 @@ public class Question {
 	
 	public void resetQuestion(String question){
 		this.question = question;
+//		System.out.println("reset question to: " + this.question);
+	}
+	
+	private void parseAnswers(){
+		String[] parsedAnswers = answer.split(DELIM);
+		for(int i=0; i<parsedAnswers.length; i++){
+			answers.add(parsedAnswers[i]);
+		}
 	}
 	
 	public void addAnswer(String answ){
