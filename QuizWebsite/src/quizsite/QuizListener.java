@@ -1,11 +1,14 @@
 package quizsite;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import javax.servlet.annotation.WebListener;
 import javax.servlet.http.HttpSession;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
+
+import web.AccountManager;
 
 /**
  * Application Lifecycle Listener implementation class QuizListener
@@ -25,6 +28,9 @@ public class QuizListener implements ServletContextListener, HttpSessionListener
      * @see ServletContextListener#contextInitialized(ServletContextEvent)
      */
     public void contextInitialized(ServletContextEvent arg0) {
+    	Quiz quiz = new Quiz();
+    	ServletContext session = arg0.getServletContext();
+        session.setAttribute("quiz", quiz);
         // TODO Auto-generated method stub
     }
 

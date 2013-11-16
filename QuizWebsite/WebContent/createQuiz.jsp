@@ -7,11 +7,12 @@
 <title>Creating Quiz</title>
 </head>
 <body>
+<form action="QuizServlet" method = "post">
+
 <h1> Creating your quiz </h1>
 
 <h2> Enter your overall description of the purpose of the quiz: </h2>
 <input type="text" name = "quizdescription">
-
 
 <h2> Creating questions for the quiz </h2>
 <p> Place next to the corresponding textbox how many of each type of question you would like in your quiz </p>
@@ -20,7 +21,8 @@
 <p> Multiple Choice: <input type="text" name = "multiple_choice"> </p>
 <p> Picture- Response Questions: <input type="text" name = "picture_response"> </p>
 
-
+<p> <input type="submit" value = "Next: Create your questions!" /></p>
+</form>
 
 </body>
 </html>
