@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import="java.util.*, quizsite.*"%>
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -10,8 +12,9 @@
 <form action="chooseQuestionType.jsp" method = "post">
 
 <%
-ServletContext a = request.getServletContext();
-Quiz quiz = (Quiz) a.getAttribute("quiz");
+
+Quiz quiz = new Quiz();
+
 %>
 
 <h1> Create your quiz! </h1>
@@ -33,6 +36,9 @@ Quiz quiz = (Quiz) a.getAttribute("quiz");
 -->
 
 <p> Click next to create your questions for this quiz: <input type="submit" value = "Next" /></p>
+
+<input name="quiz" type="hidden" value=<%= quiz %>/> 
+
 </form>
 
 </body>

@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@ page import="java.util.*, quizsite.*"%>
+    
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,30 +10,29 @@
 </head>
 <body>
 <form action="Home.jsp" method = "post">
-
 <%
-HttpSession a = request.getSession();
-Quiz x = (Quiz) a.getAttribute("quiz");
+
+Quiz quiz = request.getParameter(quiz);
 
 String randomQuestionsCheckBoxValue = request.getParameter("randomQuestions");
 if(randomQuestionsCheckBoxValue.equals("Yes")){
-	x.setDisplayRandomTrue();
+	quiz.setDisplayRandomTrue();
 }
 
 String pageNumbers = request.getParameter("pagenumbers");
 if(pageNumbers.equals("One")){
-	x.setDisplayOnePageTrue();
+	quiz.setDisplayOnePageTrue();
 }
 else{
-	x.setDisplayMultiplePagesTrue();
+	quiz.setDisplayMultiplePagesTrue();
 }
 
 String immediateCorrectionCheckBoxValue = request.getParameter("immediateCorrection");
 if(immediateCorrectionCheckBoxValue.equals("Yes")){
-	x.setImmediateCorrectionTrue();
+	quiz.setImmediateCorrectionTrue();
 }
 else{
-	x.setFinalCorrectionTrue();
+	quiz.setFinalCorrectionTrue();
 }
 %>
 
