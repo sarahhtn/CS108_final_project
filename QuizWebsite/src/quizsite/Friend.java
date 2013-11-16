@@ -1,6 +1,7 @@
 package quizsite;
 
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
@@ -22,6 +23,23 @@ public class Friend {
 			return true;
 		} catch (SQLException e) {
 			e.printStackTrace();
+		} 
+		return false;
+	}
+	
+	static public boolean areFriends(int u1ID, int u2ID, DBConnection dbCon) {
+		try {
+			String selectSQL = "SELECT * FROM friends WHERE user1=? and user2=?";
+			PreparedStatement preStmt = dbCon.getConnection().prepareStatement(selectSQL);
+			preStmt.setInt(1, u1ID);
+			preStmt.setInt(2, u2ID);
+			ResultSet rs = preStmt.executeQuery();
+			if(rs.next()) {
+				return true;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return false;
 		} 
 		return false;
 	}

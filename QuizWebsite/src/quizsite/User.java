@@ -50,6 +50,25 @@ public class User {
 		this.dbCon = dbCon;
 	}
 	
+	
+	public User(int userId, DBConnection dbCon) {
+		this.id = userId;
+		try {
+			// get user id
+			String selectSQL = "SELECT username FROM users WHERE id = ?";
+			PreparedStatement preStmt = dbCon.getConnection().prepareStatement(selectSQL);
+			preStmt.setInt(1, id);
+			ResultSet rs = preStmt.executeQuery();
+			if(rs.next()) {
+				String recordedUsername = rs.getString("username");
+				this.username = recordedUsername;
+			}			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} 
+		this.dbCon = dbCon;
+	}
+	
 	static public boolean registerUser(String username, String pw, DBConnection dbCon) {
 		//User.count++;
 		//int id = User.count;
@@ -59,11 +78,12 @@ public class User {
 		String password = generateHash(pw + salt);
 		System.out.println("hashed pw is  " + password);		
 		try {
-			PreparedStatement preStmt = dbCon.getConnection().prepareStatement("INSERT INTO users (username, password, salt) VALUES (?, ?, ?)");
+			PreparedStatement preStmt = dbCon.getConnection().prepareStatement("INSERT INTO users (username, password, salt, numNewMail) VALUES (?, ?, ?, ?)");
 			//preStmt.setInt(1, id);
 			preStmt.setString(1, username);
 			preStmt.setString(2, password);
 			preStmt.setString(3, salt);
+			preStmt.setInt(4, 0);
 			preStmt.executeUpdate();
 			System.out.println("in registerUser");
 			return true;
@@ -151,7 +171,7 @@ public class User {
 	public ArrayList<Mail> getMails() {
 		this.mailReceived = new ArrayList<Mail>();
 		try {
-			String selectSQL = "SELECT fromId, type, content FROM mails WHERE toId = ?";
+			String selectSQL = "SELECT fromId, type, content FROM mails WHERE toId = ? ORDER BY id DESC";
 			PreparedStatement preStmt = this.dbCon.getConnection().prepareStatement(selectSQL);
 			preStmt.setInt(1, this.id);
 			ResultSet rs = preStmt.executeQuery();
@@ -166,6 +186,71 @@ public class User {
 			e.printStackTrace();
 		} 
 		return this.mailReceived;
+	}
+	
+	static public String getUsernameById(int id, DBConnection dbCon) {
+		try {
+			String selectSQL = "SELECT username FROM users WHERE id = ?";
+			PreparedStatement preStmt = dbCon.getConnection().prepareStatement(selectSQL);
+			preStmt.setInt(1, id);
+			ResultSet rs = preStmt.executeQuery();
+			if(rs.next()) {
+				return rs.getString("username");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		} 
+		return null;
+	}
+	
+	static public int getNumNewMailById(int id, DBConnection dbCon) {
+		try {
+			String selectSQL = "SELECT numNewMail FROM users WHERE id = ?";
+			PreparedStatement preStmt = dbCon.getConnection().prepareStatement(selectSQL);
+			preStmt.setInt(1, id);
+			ResultSet rs = preStmt.executeQuery();
+			if(rs.next()) {
+				return rs.getInt("numNewMail");
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return 0;
+		} 
+		return 0;
+	}
+	
+	static public boolean incrementNumNewMailByOne(int id, DBConnection dbCon) {
+		try {
+			int currNumNewMail = User.getNumNewMailById(id, dbCon);
+			currNumNewMail++;
+			String updateSQL = "UPDATE users SET numNewMail = ? WHERE id = ?";
+			PreparedStatement preStmt = dbCon.getConnection().prepareStatement(updateSQL);
+			preStmt.setInt(1, currNumNewMail);
+			preStmt.setInt(2, id);
+			preStmt.executeUpdate();
+			return true;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return false;
+		} 
+	}
+	
+	static public boolean setNumNewMailToZeroById(int id, DBConnection dbCon) {
+		try {
+			String updateSQL = "UPDATE users SET numNewMail=0 WHERE id = ?";
+			PreparedStatement preStmt = dbCon.getConnection().prepareStatement(updateSQL);
+			preStmt.setInt(1, id);
+			preStmt.executeUpdate();
+			return true;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return false;
+		}
+	}
+	
+	//dummy quiz obj
+	public class Quiz {
 	}
 	
 }

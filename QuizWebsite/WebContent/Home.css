@@ -47,6 +47,26 @@ body {
 	text-align: center;
 }
 
+.each_mail {
+	background-color: #eeeeee;
+	padding: 3px;
+	margin: 2px;	
+}
+
+.mail_msg {
+	padding: 3px;
+	margin: 2px;
+}
+
+.new_mail_notice {
+	color: red;
+	font-size: 12px;
+}
+
+.logout {
+	text-align: right;
+}
+
 /*.pop_quiz {
 	color: red;
 	width: 24%;	
