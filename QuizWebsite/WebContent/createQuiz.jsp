@@ -11,22 +11,15 @@
 <body>
 <form action="chooseQuestionType.jsp" method = "post">
 
-<%
-Quiz quiz = new Quiz();
-%>
-
 <h1> Create your quiz! </h1>
 
 <h2> Enter the title of your quiz: </h2>
 <input type = "text" name = "quiztitle">
 
-
 <h2> Enter your overall description of the purpose of this quiz: </h2>
 <input type="text" name = "quizdescription">
 
 <p> Click next to create your questions for this quiz: <input type="submit" value = "Next" /></p>
-
-<input name="quiz" type="hidden" value=<%= quiz %>/> 
 
 </form>
 

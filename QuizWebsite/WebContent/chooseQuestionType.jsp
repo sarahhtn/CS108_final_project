@@ -12,27 +12,30 @@
 <body>
 
 <%
-Quiz quiz = request.getParameter("quiz");
+Quiz quiz = (Quiz) session.getAttribute("newQuiz");
+
+String title = request.getParameter("quiztitle");
+
+quiz.addQuizTitle(title);
+String description = request.getParameter("quizdescription");
+quiz.addQuizDescription(description);
+
 %>
 
-<form action="optionsQuiz.jsp" method = "post">
+<form action="CreateQR.html" method = "post">
 <p> <input type="submit" value = "Question-Response" /> </p>
-<input name="quiz" type="hidden" value= <%= quiz %>/> 
 </form>
 
-<form action="optionsQuiz.jsp" method = "post">
+<form action="CreateFITB.html" method = "post">
 <p> <input type="submit" value = "Fill In the Blank" /> </p>
-<input name="quiz" type="hidden" value=<%= quiz %>/> 
 </form>
 
-<form action="optionsQuiz.jsp" method = "post">
+<form action="CreateMC.html" method = "post">
 <p> <input type="submit" value = "Multiple Choice" /> </p>
-<input name="quiz" type="hidden" value=<%= quiz %>/> 
 </form>
 
-<form action="optionsQuiz.jsp" method = "post">
+<form action="CreatePR.html" method = "post">
 <p> <input type="submit" value = "Picture-Response Questions" /> </p>
-<input name="quiz" type="hidden" value=<%= quiz %>/> 
 </form>
 
 </body>

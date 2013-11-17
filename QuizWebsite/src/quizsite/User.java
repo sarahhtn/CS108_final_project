@@ -4,6 +4,7 @@ import java.security.MessageDigest;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.Time;
 import java.util.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -22,6 +23,7 @@ public class User {
 	private ArrayList<Quiz> quizCreated;
 	private ArrayList<Quiz> quizTaken;
 	private ArrayList<Mail> mailReceived;
+	private ArrayList<History> history;
 	private boolean hasNewMail;
 	
 	DBConnection dbCon;
@@ -164,10 +166,6 @@ public class User {
 		return this.username;
 	}
 	
-	public ArrayList<User> getFriendsList() {
-		return null;
-	}
-	
 	public ArrayList<Mail> getMails() {
 		this.mailReceived = new ArrayList<Mail>();
 		try {
@@ -186,6 +184,47 @@ public class User {
 			e.printStackTrace();
 		} 
 		return this.mailReceived;
+	}
+	
+	public ArrayList<History> getHistories() {
+		this.history = new ArrayList<History>();
+		try {
+			String selectSQL = "SELECT quizId, score, elapsedTime, finishAt FROM histories WHERE userId = ? ORDER BY id DESC";
+			PreparedStatement preStmt = this.dbCon.getConnection().prepareStatement(selectSQL);
+			preStmt.setInt(1, this.id);
+			ResultSet rs = preStmt.executeQuery();
+			while(rs.next()) {
+				int quizId = rs.getInt("quizId");
+				int score = rs.getInt("score");
+				Time elapsedTime = rs.getTime("elapsedTime");
+				java.sql.Date finishAt = rs.getDate("finishAt");
+				History h = new History(quizId, score, elapsedTime, finishAt);
+				this.history.add(h);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} 
+		return this.history;
+	}
+	
+	public ArrayList<User> getFriendsList() {
+		this.friends = new ArrayList<User>();
+		ArrayList<Integer> friendsIdList = new ArrayList<Integer>();
+		try {
+			String selectSQL = "SELECT user2 FROM friends WHERE user1 = ?";
+			PreparedStatement preStmt = this.dbCon.getConnection().prepareStatement(selectSQL);
+			preStmt.setInt(1, this.id);
+			ResultSet rs = preStmt.executeQuery();
+			while(rs.next()) {
+				int friendId = rs.getInt("user2");
+				friendsIdList.add(friendId);
+				User u = new User(friendId, dbCon);
+				this.friends.add(u);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} 	
+		return this.friends;
 	}
 	
 	static public String getUsernameById(int id, DBConnection dbCon) {
@@ -249,8 +288,5 @@ public class User {
 		}
 	}
 	
-	//dummy quiz obj
-	public class Quiz {
-	}
 	
 }

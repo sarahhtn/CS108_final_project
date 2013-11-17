@@ -12,7 +12,8 @@
 <form action="Home.jsp" method = "post">
 <%
 
-Quiz quiz = request.getParameter("quiz");
+Quiz quiz = (Quiz) session.getAttribute("newQuiz");
+
 String randomQuestionsCheckBoxValue = request.getParameter("randomQuestions");
 
 if(randomQuestionsCheckBoxValue.equals("1")){

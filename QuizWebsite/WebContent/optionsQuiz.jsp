@@ -12,9 +12,8 @@
 
 <body>
 <%
-Quiz quiz = request.getParameter("quiz");
+Quiz quiz = (Quiz) session.getAttribute("newQuiz");
 %>
-<input name="quiz" type="hidden" value= <%= quiz %>/> 
 
 <h1> Choose options for your quiz</h1>
 
