@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@page import="quizsite.DBConnection, quizsite.History, quizsite.User, quizsite.Mail, java.util.*, java.sql.ResultSet, java.text.*"%>
+<%@page import="quizsite.*, quizsite.DBConnection, quizsite.History, quizsite.User, quizsite.Mail, java.util.*, java.sql.ResultSet, java.text.*"%>
  
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -86,7 +86,9 @@ for(int i = 0; i < histories.size(); i++) {
 <a href="AllHistories.jsp">Check History &gt;&gt;</a>
 </div>
 
-<a href="QuizServlet">Creat Quiz &gt;&gt;</a>
+<form action="QuizServlet" method = "post">
+<input type="submit" value = "Create quiz" />
+</form>
 
 <!--<form action="HistoryServlet" method="post">
 <input type="submit" value="Create History"/>
