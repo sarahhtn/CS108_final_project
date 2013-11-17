@@ -54,7 +54,7 @@ public class QServlet extends HttpServlet {
 			default: newQn = null;
 				break;
 		}
-		if(newQn!=null) qz.addQuestion(newQn);
+		if(newQn.equals(null)) qz.addQuestion(newQn);
 		
 		 String action = request.getParameter("action");
 		 if(action.equals("Create & Continue")){

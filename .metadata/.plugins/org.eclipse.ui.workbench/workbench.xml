@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="74" version="2.0">
+<workbench progressCount="44" version="2.0">
 <workbenchAdvisor/>
 <window height="715" width="1258" x="21" y="22">
 <fastViewData fastViewLocation="1024"/>
@@ -48,8 +48,7 @@
 </view>
 <view id="org.eclipse.ui.views.AllMarkersView" partName="Markers">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.allSeverityField" categoryGroup="org.eclipse.ui.ide.type" markerContentGenerator="org.eclipse.ui.ide.allMarkersGenerator" partName="Markers">
-<expanded>
-<category IMemento.internal.id="Java Problems"/>
+<expanded>&#x0A;<category IMemento.internal.id="Java Problems"/>
 <category IMemento.internal.id="Java Build Path Problems"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.allSeverityField="772" org.eclipse.ui.ide.locationField="84" org.eclipse.ui.ide.markerType="114" org.eclipse.ui.ide.pathField="144" org.eclipse.ui.ide.resourceField="114"/>
@@ -220,6 +219,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="User.jsp" tooltip="QuizWebsite/WebContent/User.jsp">
+<persistable path="/QuizWebsite/WebContent/User.jsp"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Quiz.java" tooltip="QuizWebsite/src/quizsite/Quiz.java">
 <persistable path="/QuizWebsite/src/quizsite/Quiz.java"/>
 </file>

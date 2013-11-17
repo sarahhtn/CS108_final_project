@@ -34,8 +34,8 @@ if(currUser != null && u.getId() == currUser.getId()) {
 <button name="reqType" type="submit" value="friend">Add as Friend</button><br/>
 <button name="reqType" type="submit" value="challenge">Send Challenge</button>
 <span>Challenge url: <input type="text" name="challengeUrl"></span><br/>
-<button name="reqType" type="submit" value="note">Send Note</button>
 <p><textarea cols="40" rows="5" name="noteContent" placeholder="Write your msg here..."></textarea></p>
+<button name="reqType" type="submit" value="note">Send Note</button>
 </form>
 
 </body>

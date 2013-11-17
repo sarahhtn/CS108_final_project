@@ -36,6 +36,17 @@ public class Question {
 		}
 	}
 	
+	@Override
+	public boolean equals(Object obj){
+		if (obj == null)
+            return false;
+        if (obj == this)
+            return true;
+        if (!(obj instanceof Question))
+            return false;
+		return question == ((Question) obj).getQuestion();
+	}
+	
 	public void addAnswer(String answ){
 		answers.add(answ);
 	}
