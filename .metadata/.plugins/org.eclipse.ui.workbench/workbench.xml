@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="44" version="2.0">
 <workbenchAdvisor/>
-<window height="715" width="1258" x="21" y="22">
+<window height="711" width="1258" x="21" y="22">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -219,38 +219,47 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HistoryServlet.java" tooltip="QuizWebsite/src/quizsite/HistoryServlet.java">
+<persistable path="/QuizWebsite/src/quizsite/HistoryServlet.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="QServlet.java" tooltip="QuizWebsite/src/quizsite/QServlet.java">
+<persistable path="/QuizWebsite/src/quizsite/QServlet.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="User.java" tooltip="QuizWebsite/src/quizsite/User.java">
+<persistable path="/QuizWebsite/src/quizsite/User.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Question.java" tooltip="QuizWebsite/src/quizsite/Question.java">
+<persistable path="/QuizWebsite/src/quizsite/Question.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="QuizServlet.java" tooltip="QuizWebsite/src/quizsite/QuizServlet.java">
+<persistable path="/QuizWebsite/src/quizsite/QuizServlet.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="CreateMC.html" tooltip="QuizWebsite/WebContent/CreateMC.html">
+<persistable path="/QuizWebsite/WebContent/CreateMC.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="CreateFITB.html" tooltip="QuizWebsite/WebContent/CreateFITB.html">
+<persistable path="/QuizWebsite/WebContent/CreateFITB.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="CreateQR.html" tooltip="QuizWebsite/WebContent/CreateQR.html">
+<persistable path="/QuizWebsite/WebContent/CreateQR.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="CreatePR.html" tooltip="QuizWebsite/WebContent/CreatePR.html">
+<persistable path="/QuizWebsite/WebContent/CreatePR.html"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="User.jsp" tooltip="QuizWebsite/WebContent/User.jsp">
 <persistable path="/QuizWebsite/WebContent/User.jsp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Quiz.java" tooltip="QuizWebsite/src/quizsite/Quiz.java">
 <persistable path="/QuizWebsite/src/quizsite/Quiz.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="CreateMC.html" tooltip="QuizWebsite/WebContent/CreateMC.html">
-<persistable path="/QuizWebsite/WebContent/CreateMC.html"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MultiChoice.java" tooltip="QuizWebsite/src/quizsite/MultiChoice.java">
 <persistable path="/QuizWebsite/src/quizsite/MultiChoice.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="CreatePR.html" tooltip="QuizWebsite/WebContent/CreatePR.html">
-<persistable path="/QuizWebsite/WebContent/CreatePR.html"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="QuizServlet.java" tooltip="QuizWebsite/src/quizsite/QuizServlet.java">
-<persistable path="/QuizWebsite/src/quizsite/QuizServlet.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="QServlet.java" tooltip="QuizWebsite/src/quizsite/QServlet.java">
-<persistable path="/QuizWebsite/src/quizsite/QServlet.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="CreateQR.html" tooltip="QuizWebsite/WebContent/CreateQR.html">
-<persistable path="/QuizWebsite/WebContent/CreateQR.html"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="createFITB.html" tooltip="QuizWebsite/WebContent/createFITB.html">
 <persistable path="/QuizWebsite/WebContent/createFITB.html"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FillIn.java" tooltip="QuizWebsite/src/quizsite/FillIn.java">
 <persistable path="/QuizWebsite/src/quizsite/FillIn.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FriendServlet.java" tooltip="QuizWebsite/src/quizsite/FriendServlet.java">
-<persistable path="/QuizWebsite/src/quizsite/FriendServlet.java"/>
 </file>
 </mruList>
 </workbench>
