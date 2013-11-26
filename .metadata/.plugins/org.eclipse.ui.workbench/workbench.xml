@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <workbench progressCount="56" version="2.0">
+=======
+<workbench progressCount="44" version="2.0">
+>>>>>>> f7e3a3841c672cb68970a83cbac434f06ec5693c
 <workbenchAdvisor/>
 <window height="714" width="1258" x="21" y="22">
 <fastViewData fastViewLocation="1024"/>
@@ -219,6 +223,7 @@
 </trimLayout>
 </window>
 <mruList>
+<<<<<<< HEAD
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="chooseQuestionType.jsp" tooltip="QuizWebsite/WebContent/chooseQuestionType.jsp">
 <persistable path="/QuizWebsite/WebContent/chooseQuestionType.jsp"/>
 </file>
@@ -233,6 +238,10 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FriendServlet.java" tooltip="QuizWebsite/src/quizsite/FriendServlet.java">
 <persistable path="/QuizWebsite/src/quizsite/FriendServlet.java"/>
+=======
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="User.jsp" tooltip="QuizWebsite/WebContent/User.jsp">
+<persistable path="/QuizWebsite/WebContent/User.jsp"/>
+>>>>>>> f7e3a3841c672cb68970a83cbac434f06ec5693c
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Quiz.java" tooltip="QuizWebsite/src/quizsite/Quiz.java">
 <persistable path="/QuizWebsite/src/quizsite/Quiz.java"/>
