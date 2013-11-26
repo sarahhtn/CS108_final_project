@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@page import="quizsite.DBConnection, quizsite.User, quizsite.Mail, java.util.*, java.sql.ResultSet, java.text.*"%>
+<%@page import="quizsite.*, quizsite.DBConnection, quizsite.History, quizsite.User, quizsite.Mail, java.util.*, java.sql.ResultSet, java.text.*"%>
  
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <%
 User currUser = (User) session.getAttribute("user");
 ArrayList<Mail> mails = currUser.getMails();
+ArrayList<History> histories = currUser.getHistories();
+ArrayList<User> friends = currUser.getFriendsList();
 DBConnection con = (DBConnection) session.getAttribute("connection");
 if(con == null) {
 	con = new DBConnection();
@@ -65,9 +67,34 @@ for(int i = 0; i < numNewMail; i++) {
 
 <div class="friends_activity">
 <p class="block_title">Friends Activities</p>
+<%
+for(int i = 0; i < friends.size(); i++) {
+	User f = friends.get(i);
+	out.println("<p class='each_history'>Your friend " + f.getUsername() + ". </p>");
+}
+%>
 </div>
 
-<!--<form action="FriendServlet" method="post">
+<div class="user_history">
+<p class="block_title">History</p>
+<%
+for(int i = 0; i < histories.size(); i++) {
+	History h = histories.get(i);
+	out.println("<p class='each_history'>Take quiz " + h.getQuizId() + ", using " + h.getElapsedTime() + ", score is " + h.getScore() + ", at " + h.getFinishAt() + ". </p>");
+}
+%>
+<a href="AllHistories.jsp">Check History &gt;&gt;</a>
+</div>
+
+<form action="QuizServlet" method = "post">
+<input type="submit" value = "Create quiz" />
+</form>
+
+<!--<form action="HistoryServlet" method="post">
+<input type="submit" value="Create History"/>
+</form>
+
+--><!--<form action="FriendServlet" method="post">
 <input type="submit" value="Create Friend"/>
 </form>
 
