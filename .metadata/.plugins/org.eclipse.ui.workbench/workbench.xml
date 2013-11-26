@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<workbench progressCount="56" version="2.0">
+=======
 <workbench progressCount="44" version="2.0">
+>>>>>>> f7e3a3841c672cb68970a83cbac434f06ec5693c
 <workbenchAdvisor/>
+<<<<<<< HEAD
 <window height="711" width="1258" x="21" y="22">
+=======
+<window height="714" width="1258" x="21" y="22">
+>>>>>>> f3d16850844513e7434ec368d8dc3982def888cb
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -219,8 +227,30 @@
 </trimLayout>
 </window>
 <mruList>
+<<<<<<< HEAD
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HistoryServlet.java" tooltip="QuizWebsite/src/quizsite/HistoryServlet.java">
 <persistable path="/QuizWebsite/src/quizsite/HistoryServlet.java"/>
+=======
+<<<<<<< HEAD
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="chooseQuestionType.jsp" tooltip="QuizWebsite/WebContent/chooseQuestionType.jsp">
+<persistable path="/QuizWebsite/WebContent/chooseQuestionType.jsp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="Login.html" tooltip="QuizWebsite/WebContent/Login.html">
+<persistable path="/QuizWebsite/WebContent/Login.html"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="QServlet.java" tooltip="QuizWebsite/src/quizsite/QServlet.java">
+<persistable path="/QuizWebsite/src/quizsite/QServlet.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MultiChoiceTest.java" tooltip="QuizWebsite/src/quizsite/MultiChoiceTest.java">
+<persistable path="/QuizWebsite/src/quizsite/MultiChoiceTest.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FriendServlet.java" tooltip="QuizWebsite/src/quizsite/FriendServlet.java">
+<persistable path="/QuizWebsite/src/quizsite/FriendServlet.java"/>
+=======
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="User.jsp" tooltip="QuizWebsite/WebContent/User.jsp">
+<persistable path="/QuizWebsite/WebContent/User.jsp"/>
+>>>>>>> f7e3a3841c672cb68970a83cbac434f06ec5693c
+>>>>>>> f3d16850844513e7434ec368d8dc3982def888cb
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="QServlet.java" tooltip="QuizWebsite/src/quizsite/QServlet.java">
 <persistable path="/QuizWebsite/src/quizsite/QServlet.java"/>
@@ -249,11 +279,16 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jst.jsp.core.jspsource.source" name="User.jsp" tooltip="QuizWebsite/WebContent/User.jsp">
 <persistable path="/QuizWebsite/WebContent/User.jsp"/>
 </file>
+<<<<<<< HEAD
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Quiz.java" tooltip="QuizWebsite/src/quizsite/Quiz.java">
 <persistable path="/QuizWebsite/src/quizsite/Quiz.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MultiChoice.java" tooltip="QuizWebsite/src/quizsite/MultiChoice.java">
 <persistable path="/QuizWebsite/src/quizsite/MultiChoice.java"/>
+=======
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="CreateQR.html" tooltip="QuizWebsite/WebContent/CreateQR.html">
+<persistable path="/QuizWebsite/WebContent/CreateQR.html"/>
+>>>>>>> f3d16850844513e7434ec368d8dc3982def888cb
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.html.core.htmlsource.source" name="createFITB.html" tooltip="QuizWebsite/WebContent/createFITB.html">
 <persistable path="/QuizWebsite/WebContent/createFITB.html"/>
