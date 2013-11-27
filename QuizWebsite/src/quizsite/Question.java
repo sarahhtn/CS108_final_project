@@ -1,5 +1,7 @@
 package quizsite;
 
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class Question {
@@ -34,6 +36,28 @@ public class Question {
 		for(int i=0; i<parsedAnswers.length; i++){
 			answers.add(parsedAnswers[i]);
 		}
+	}
+	
+	static public boolean registerQuestion(int qzID, int type, String question, String answer, String MC, DBConnection dbCon) {
+		//User.count++;
+		//int id = User.count;
+		System.out.println("quizID: " + qzID + ", type: " + type + " - " + question + ", answer: " + answer);		
+		try {
+			PreparedStatement preStmt = dbCon.getConnection().prepareStatement("INSERT INTO questions(quizID, type, question, answer, MCoption) VALUES (?, ?, ?, ?, ?)");
+			//preStmt.setInt(1, id);
+			preStmt.setInt(1, qzID);
+			preStmt.setInt(2, type);
+			preStmt.setString(3, question);
+			preStmt.setString(4, answer);
+			preStmt.setString(5, MC);
+			preStmt.executeUpdate();
+			System.out.println("in registerQuestion");
+			return true;
+		} catch (SQLException e) {
+			e.printStackTrace();
+			System.out.println("derrr, something fucked up");
+		} 
+		return false;
 	}
 	
 	@Override

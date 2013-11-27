@@ -14,6 +14,20 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
+<<<<<<< HEAD
 	<classpathentry kind="lib" path="/Users/JennyChen/Desktop/apache-tomcat-7.0.47/lib/servlet-api.jar"/>
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="/Users/kainqiu/Desktop/_kain/tool/apache-tomcat-7.0.47/lib/servlet-api.jar"/>
+>>>>>>> 91342ea543d46bec9108ba537aee8c444678bd66
+=======
+	<classpathentry kind="lib" path="/Users/snader2/Downloads/apache-tomcat-7.0.47/lib/servlet-api.jar"/>
+>>>>>>> f7e3a3841c672cb68970a83cbac434f06ec5693c
+>>>>>>> 979cae6fbbcacb438f640e82475dceb0aeba4e82
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

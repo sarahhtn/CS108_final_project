@@ -35,3 +35,13 @@
 0:0:0:0:0:0:0:1%0 - - [16/Nov/2013:16:37:07 -0800] "POST /QuizWebsite/QServlet HTTP/1.1" 200 769
 0:0:0:0:0:0:0:1%0 - - [16/Nov/2013:16:37:11 -0800] "POST /QuizWebsite/CreateMC.html HTTP/1.1" 200 863
 0:0:0:0:0:0:0:1%0 - - [16/Nov/2013:16:37:54 -0800] "POST /QuizWebsite/MCServlet HTTP/1.1" 404 993
+127.0.0.1 - - [16/Nov/2013:16:43:54 -0800] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1%0 - - [16/Nov/2013:16:43:54 -0800] "GET /QuizWebsite/Login.html HTTP/1.1" 200 606
+0:0:0:0:0:0:0:1%0 - - [16/Nov/2013:16:44:00 -0800] "POST /QuizWebsite/LoginServlet HTTP/1.1" 200 2147
+0:0:0:0:0:0:0:1%0 - - [16/Nov/2013:16:44:00 -0800] "GET /QuizWebsite/Home.css HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1%0 - - [16/Nov/2013:16:44:02 -0800] "POST /QuizWebsite/QuizServlet HTTP/1.1" 200 650
+0:0:0:0:0:0:0:1%0 - - [16/Nov/2013:16:44:05 -0800] "POST /QuizWebsite/chooseQuestionType.jsp HTTP/1.1" 200 769
+0:0:0:0:0:0:0:1%0 - - [16/Nov/2013:16:44:07 -0800] "POST /QuizWebsite/CreateFITB.html HTTP/1.1" 200 841
+0:0:0:0:0:0:0:1%0 - - [16/Nov/2013:16:44:19 -0800] "POST /QuizWebsite/QServlet HTTP/1.1" 200 769
+0:0:0:0:0:0:0:1%0 - - [16/Nov/2013:16:44:20 -0800] "POST /QuizWebsite/CreateFITB.html HTTP/1.1" 200 841
+0:0:0:0:0:0:0:1%0 - - [16/Nov/2013:16:44:32 -0800] "POST /QuizWebsite/QServlet HTTP/1.1" 200 1572
