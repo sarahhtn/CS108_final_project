@@ -38,17 +38,17 @@ public class Quiz {
 		return quizID;
 	}
 	
-    static public boolean registerQuiz(int quizID, DBConnection dbCon, User currentUser) {
+    static public boolean registerQuiz(int qzID, DBConnection dbCon, User currentUser) {
     	
         Date createdAt = new Date();
         int timeCreated = Integer.parseInt(createdAt.toString());
         int userID = currentUser.getId();
         String key = currentUser.getUsername() + Integer.toString(quizID);
-        System.out.println("quizID: " + quizID + "userID: "  + userID + "timeCreated: " + timeCreated + "key: " + key);
+        System.out.println("quizID: " + qzID + "userID: "  + userID + "timeCreated: " + timeCreated + "key: " + key);
         
         try {
                 PreparedStatement preStmt = dbCon.getConnection().prepareStatement("INSERT INTO quizzes(quizID, userID, timeCreated, key) VALUES (?, ?, ?, ?)");
-                preStmt.setInt(1, quizID);
+                preStmt.setInt(1, qzID);
                 preStmt.setInt(2, userID);
                 preStmt.setInt(3, timeCreated);
                 preStmt.setString(4, key);
