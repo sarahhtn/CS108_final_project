@@ -47,6 +47,7 @@ public class QuizServlet extends HttpServlet {
 		}
 		
 		Quiz quiz = new Quiz();
+		quiz.setID();
 		int qzID = quiz.getID();
 		User currUser = (User) session.getAttribute("user");
 

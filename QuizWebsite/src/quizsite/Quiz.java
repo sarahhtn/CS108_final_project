@@ -23,15 +23,18 @@ public class Quiz {
 	
 	private String title;
 	private String description;
-	private static int quizID;
+	private int quizID;
 		
 	Set<Question> questions = new HashSet<Question>();
 	
 	DBConnection dbCon;
 
-	public int getID(){
+	public void setID(){
     	quizID = Quiz.count;
 		Quiz.count++;
+	}
+	
+	public int getID(){
 		return quizID;
 	}
 	
