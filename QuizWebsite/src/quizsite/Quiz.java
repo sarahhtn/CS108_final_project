@@ -1,5 +1,8 @@
 package quizsite;
 
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -10,6 +13,8 @@ public class Quiz {
 //	private int picture_response;
 //	private int fill_inblank;
 	
+	public static int count = 0;
+
 	boolean display_random = false;
 	boolean display_one_page = false;
 	boolean display_multiple_pages = false;
@@ -18,34 +23,40 @@ public class Quiz {
 	
 	private String title;
 	private String description;
-	
+	private static int quizID;
+		
 	Set<Question> questions = new HashSet<Question>();
 	
-//	public void setNumQuestionResponse(int a){
-//		question_response = a;
-//	}
-//	public void setFillInBlank(int a){
-//		fill_inblank = a;
-//	}
-//	public void setNumMultipleChoice(int a){
-//		multiple_choice = a;
-//	}
-//	public void setNumPictureResponse(int a){
-//		picture_response = a;
-//	}
-//	public int getNumQuestionResponse(){
-//		return question_response;
-//	}
-//	public int getNumMultipleChoice(){
-//		return multiple_choice;
-//	}
-//	public int getNumPictureResponse(){
-//		return picture_response;
-//	}
-//	public int getNumFillInBlank(){
-//		return fill_inblank;
-//	}
-//	
+	DBConnection dbCon;
+
+	public int getID(){
+    	quizID = Quiz.count;
+		Quiz.count++;
+		return quizID;
+	}
+	
+    static public boolean registerQuiz(int quizID, DBConnection dbCon, User currentUser) {
+    	
+        Date createdAt = new Date();
+        int timeCreated = Integer.parseInt(createdAt.toString());
+        int userID = currentUser.getId();
+        String key = currentUser.getUsername() + Integer.toString(quizID);
+        System.out.println("quizID: " + quizID + "userID: "  + userID + "timeCreated: " + timeCreated + "key: " + key);
+        
+        try {
+                PreparedStatement preStmt = dbCon.getConnection().prepareStatement("INSERT INTO quizzes(quizID, userID, timeCreated, key) VALUES (?, ?, ?, ?)");
+                preStmt.setInt(1, quizID);
+                preStmt.setInt(2, userID);
+                preStmt.setInt(3, timeCreated);
+                preStmt.setString(4, key);
+                preStmt.executeUpdate();
+                System.out.println("in registerQuiz");
+                return true;
+        } catch (SQLException e) {
+                e.printStackTrace();
+        } 
+        return false;
+}
 	
 	public void addQuizTitle(String str){
 		title = str;

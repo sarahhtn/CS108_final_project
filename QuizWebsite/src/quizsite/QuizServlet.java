@@ -36,14 +36,24 @@ public class QuizServlet extends HttpServlet {
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		System.out.println("here0");
-		Quiz quiz = new Quiz();
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {		
+		
 		HttpSession session = request.getSession();
+		DBConnection con = (DBConnection) session.getAttribute("connection");
+		if(con == null) {
+			con = new DBConnection();
+			session.setAttribute("connection", con);
+			//System.out.println("con is NULL");
+		}
+		
+		Quiz quiz = new Quiz();
+		int qzID = quiz.getID();
+		User currUser = (User) session.getAttribute("user");
+
+		Quiz.registerQuiz(qzID, con, currUser);
+		
 		session.setAttribute("newQuiz", quiz);
-		System.out.println("here1");
 		RequestDispatcher dispatch = request.getRequestDispatcher("createQuiz.jsp");
 		dispatch.forward(request, response);
-		System.out.println("here2");
 	}
 }
